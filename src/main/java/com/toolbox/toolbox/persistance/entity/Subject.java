@@ -10,14 +10,20 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Subject {
+    //Generated value?
     @Id
-    private int id;
+    private String id;
     private String name;
-    //private List<Subject> prerequisites;
-    //private List<Subject> corequisites;
+    private List<String> prerequisites;
+    private List<String> corequisites;
     private int credits;
-    private int semester;
+    private int level;
     private int version;
     private String summary;
     private int hoursWeek;
+    private List <String> usefulResources; //hashmap?
+    private List <String> tips;
+    private String area;
+    private boolean state; //no vista, cursada
+    //private int timesViewed; //para recursantes
 }
