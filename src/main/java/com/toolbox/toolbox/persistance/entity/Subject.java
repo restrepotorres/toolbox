@@ -22,8 +22,7 @@ public class Subject {
     private int version;
     private String summary;
     private int hoursWeek;
-    private HashMap<String,HashMap<String,String>> usefulResources;
-    //HashMap<tipo_de_recurso<descripción,url>>
+    private HashMap<String, String> usefulResources;    //HashMap<tipo_de_recurso<descripción,url>>
     private List <String> tips;
     private String area;
     private boolean state; //no vista, cursada

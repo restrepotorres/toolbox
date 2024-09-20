@@ -10,6 +10,6 @@ public class health {
 
     @GetMapping("/check")
     public String check() {
-        return "All is ok";
+        return "All is ok v2";
     }
 }
