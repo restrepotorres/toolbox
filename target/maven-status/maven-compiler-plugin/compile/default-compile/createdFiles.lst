@@ -1,7 +1,0 @@
-com\toolbox\toolbox\Domain\repository\SubjectRepository.class
-com\toolbox\toolbox\web\controller\SubjectController.class
-com\toolbox\toolbox\web\controller\WebConfig.class
-com\toolbox\toolbox\ToolboxApplication.class
-com\toolbox\toolbox\service\SubjectService.class
-com\toolbox\toolbox\web\controller\health.class
-com\toolbox\toolbox\persistance\entity\Subject.class
