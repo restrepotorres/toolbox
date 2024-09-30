@@ -24,5 +24,6 @@ public class Subject {
     private HashMap<String, String[]> usefulResources; //TipoRecurso: resumen url
     private List <String> tips;
     private String area;
+    private Boolean electiva;
     private boolean state; //no vista, cursada
 }

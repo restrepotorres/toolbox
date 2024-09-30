@@ -1,4 +1,4 @@
-package com.toolbox.toolbox.web.controller;
+package com.toolbox.toolbox.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
