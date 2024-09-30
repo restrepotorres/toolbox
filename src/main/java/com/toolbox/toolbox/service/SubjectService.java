@@ -10,8 +10,11 @@ import java.util.Optional;
 
 @Service
 public class SubjectService {
+    SubjectRepository  subjectRepository;
     @Autowired
-    private SubjectRepository subjectRepository;
+    public SubjectService(SubjectRepository subjectRepository){
+        this.subjectRepository = subjectRepository;
+    }
 
     public List<Subject> findAll() {
         return subjectRepository.findAll();
@@ -21,7 +24,12 @@ public class SubjectService {
         return subjectRepository.findById(id);
     }
 
-    public Subject save(Subject subject) {
-        return subjectRepository.save(subject);
+    public void save(Subject subject) {
+        subjectRepository.save(subject);
     }
+
+    public void delete(Subject subject) {
+        subjectRepository.delete(subject);
+    }
+
 }

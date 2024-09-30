@@ -11,7 +11,6 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Subject {
-    //Generated value?
     @Id
     private String id;
     private String name;
@@ -22,10 +21,9 @@ public class Subject {
     private int version;
     private String summary;
     private int hoursWeek;
-    private HashMap<String,HashMap<String,String>> usefulResources;
-    //HashMap<tipo_de_recurso<descripción,url>>
+    private HashMap<String, String[]> usefulResources; //TipoRecurso: resumen url
     private List <String> tips;
     private String area;
+    private Boolean electiva;
     private boolean state; //no vista, cursada
-    //private int timesViewed; //para recursantes
 }

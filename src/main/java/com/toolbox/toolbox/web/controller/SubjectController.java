@@ -13,9 +13,12 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/subject")
 public class SubjectController {
+    SubjectService subjectService;
 
     @Autowired
-    SubjectService subjectService;
+    public SubjectController(SubjectService subjectService) {
+        this.subjectService = subjectService;
+    }
 
     @PostMapping("/add")
     public void addSubject(@RequestBody Subject subject){
@@ -31,10 +34,17 @@ public class SubjectController {
     @GetMapping("/getbyid/{id}")
     public ResponseEntity<Subject> getSubjectById(@PathVariable String id){
         Optional<Subject> subject = subjectService.findById(id);
-        if (subject.isPresent()) {
-            return ResponseEntity.ok(subject.get());
-        }else{
-            return ResponseEntity.notFound().build();
-        }
+        return subject.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public void deleteSubject(@PathVariable String id){
+        Optional<Subject> subject = subjectService.findById(id);
+        subject.ifPresent(value -> subjectService.delete(value));
+    }
+
+    @PutMapping
+    public void updateSubject(@RequestBody Subject subject){
+       subjectService.save(subject);
     }
 }
