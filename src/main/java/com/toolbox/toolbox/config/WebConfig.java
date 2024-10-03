@@ -12,7 +12,7 @@ public class WebConfig  implements WebMvcConfigurer {
         registry.addMapping("/**")
                 .allowedOrigins("*") // Permitir cualquier origen
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "HEAD") // Permitir todos los métodos HTTP
-                .allowedHeaders("*") // Permitir cualquier cabecera
-                .allowCredentials(false); // Deshabilitar envío de credenciales (cookies)
+                .allowedHeaders("*") ;// Permitir cualquier cabecera
+                //.allowCredentials(false); // Deshabilitar envío de credenciales (cookies)
     }
 }

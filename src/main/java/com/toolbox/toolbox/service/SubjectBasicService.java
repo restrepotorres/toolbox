@@ -1,10 +1,8 @@
 package com.toolbox.toolbox.service;
 
 import com.toolbox.toolbox.Domain.DTO.SubjectBasicDTO;
-import com.toolbox.toolbox.Domain.DTO.SubjectFullDTO;
 import com.toolbox.toolbox.Domain.Mapper.SubjectBasicMapper;
-import com.toolbox.toolbox.Domain.Mapper.SubjectFullMapper;
-import com.toolbox.toolbox.Domain.repository.SubjectRepository;
+import com.toolbox.toolbox.persistance.repository.SubjectRepository;
 import com.toolbox.toolbox.persistance.entity.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
