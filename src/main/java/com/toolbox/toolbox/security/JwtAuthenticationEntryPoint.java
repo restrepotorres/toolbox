@@ -10,7 +10,7 @@ import org.springframework.security.core.AuthenticationException;
 import java.io.IOException;
 
 @Component
-public class JwtAuthentication implements AuthenticationEntryPoint {
+public class JwtAuthenticationEntryPoint implements AuthenticationEntryPoint {
 
 
 
