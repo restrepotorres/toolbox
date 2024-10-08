@@ -23,7 +23,8 @@ public class SubjectBasicService {
     public List<SubjectBasicDTO> getAllSubjects() {
         return subjectRepository.findAll().stream()
                 .map(subjectBasicMapper::toDto)
-                .collect(Collectors.toList());
+                .toList();
+
     }
 
     public SubjectBasicDTO getSubjectById(String id) {

@@ -15,10 +15,12 @@ public class JwtProvider {
     //generar token
     public String generateToken(Authentication authentication) {
         String username = authentication.getName();
+        String role = authentication.getAuthorities().toString();
         Date now = new Date();
         Date expiryDate = new Date(now.getTime() + SecurityConsts.JWT_EXPIRATION_TIME);
         return Jwts.builder() //Construimos un token JWT llamado token
                 .setSubject(username) //Aca establecemos el nombre de usuario que está iniciando sesión
+                .claim("role", role) // Agregamos el rol al token como un claim
                 .setIssuedAt(new Date()) //Establecemos la fecha de emisión del token en el momento actual
                 .setExpiration(expiryDate) //Establecemos la fecha de caducidad del token
                 .signWith(SignatureAlgorithm.HS512, SecurityConsts.JWT_SIGNATURE) /*Utilizamos este método para firmar
