@@ -19,4 +19,5 @@ public class SubjectBasicDTO {
     private int level;
     private String area;
     private boolean state;
+    private int version;
 }

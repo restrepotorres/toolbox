@@ -24,4 +24,5 @@ public class SubjectFullDTO {
     private String area;
     private Boolean electiva;
     private boolean state; // no vista, cursada
+    private int version;
 }
